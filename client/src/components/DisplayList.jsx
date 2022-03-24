@@ -21,17 +21,13 @@ const DisplayList = (props) => {
                 <thead>
                     <tr>
                         <th>product name</th>
-                        <th>product price</th>
-                        <th>product description</th>
-                        <th colSpan={2}> Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     {products.map((product, i)=>                        
                     <tr key = {i}>
                             <td> <Link to={`/products/${product._id}`}>{product.title}</Link></td>
-                            <td>{product.price}</td>
-                            <td>{product.description}</td>
+                            <td><Link to={`/products/update/${product._id}`}> edit</Link></td>
                         </tr>)
                     }
                 </tbody>
